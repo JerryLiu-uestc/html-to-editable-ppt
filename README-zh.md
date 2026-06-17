@@ -69,6 +69,10 @@ DeckForge 支持多种输出策略：
 - Linux：可选渲染 QA 需要 LibreOffice 和 Poppler utilities。
 - Windows：可选真实 Office 自动化需要 WPS 或 Microsoft Office，加上 `pywin32`；WPS/MS Office COM 只支持 Windows。
 
+## Demo
+
+查看 [examples/deckforge-demo](examples/deckforge-demo)，里面有一份已生成的可编辑 PPTX demo、源 schema 和渲染 QA contact sheet。
+
 ## 使用
 
 在 Codex 里说：

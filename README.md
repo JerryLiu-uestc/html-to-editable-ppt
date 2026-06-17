@@ -69,6 +69,10 @@ Platform dependency notes:
 - Linux: optional render QA needs LibreOffice and Poppler utilities.
 - Windows: optional live Office automation needs WPS or Microsoft Office plus `pywin32`; WPS/MS Office COM is Windows-only.
 
+## Demo
+
+See [examples/deckforge-demo](examples/deckforge-demo) for a generated editable PPTX demo, its source schema, and a rendered QA contact sheet.
+
 ## Use
 
 In Codex, ask:
