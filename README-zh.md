@@ -18,6 +18,112 @@ DeckForge Harness 是一个用于智能 PPT / 演示文稿工作流的 Codex 插
 
 DeckForge 在开始制作 PPT 前会先询问并锁定需求，并把视觉质量作为硬性门槛，而不是可选优化。它会先确认页数、标题、受众、语言、资料范围、风格方向、可编辑目标和质量参考，再进入采集或设计阶段。
 
+## 快速开始
+
+把插件克隆到本地 Codex 插件目录：
+
+```bash
+mkdir -p ~/plugins
+git clone https://github.com/JerryLiu-uestc/deck-forge-harness.git ~/plugins/deck-forge-harness
+```
+
+安装 Python 依赖：
+
+```bash
+python3 -m pip install python-pptx pillow
+```
+
+安装渲染依赖：
+
+```bash
+# macOS
+brew install --cask libreoffice
+brew install poppler
+
+# Ubuntu / Debian
+sudo apt-get update
+sudo apt-get install -y libreoffice poppler-utils
+```
+
+如果需要 HTML / 浏览器截图采集，再安装 Playwright：
+
+```bash
+npm install -g playwright
+playwright install chromium
+```
+
+把插件注册到 Codex 个人 marketplace：
+
+```bash
+mkdir -p ~/.agents/plugins
+cat > ~/.agents/plugins/marketplace.json <<'JSON'
+{
+  "name": "personal",
+  "interface": {
+    "displayName": "Personal"
+  },
+  "plugins": [
+    {
+      "name": "deck-forge-harness",
+      "source": {
+        "source": "local",
+        "path": "./plugins/deck-forge-harness"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
+JSON
+```
+
+重启 Codex 或刷新插件列表，然后在个人 marketplace 中启用 `deck-forge-harness`。
+
+验证本地 harness：
+
+```bash
+cd ~/plugins/deck-forge-harness
+python3 scripts/deckforge.py doctor
+```
+
+在 macOS 上，预期输出会提示 WPS COM 不可用，并推荐 `python-pptx + LibreOffice`。
+
+运行一页 PPTX 冒烟测试：
+
+```bash
+mkdir -p /tmp/deckforge-smoke
+cat > /tmp/deckforge-smoke/deck-schema.json <<'JSON'
+{
+  "canvas": {"w": 1280, "h": 720},
+  "slides": [
+    {
+      "background": "#FFFFFF",
+      "elements": [
+        {"type": "text", "x": 80, "y": 70, "w": 980, "h": 90, "text": "DeckForge is ready", "fs": 44, "bold": true, "color": "#0F766E"},
+        {"type": "card", "x": 80, "y": 190, "w": 460, "h": 180, "fill": "#ECFDF5", "line": "#99F6E4"},
+        {"type": "text", "x": 110, "y": 230, "w": 400, "h": 80, "text": "Schema to editable PPTX", "fs": 26, "bold": true, "color": "#134E4A"}
+      ]
+    }
+  ]
+}
+JSON
+
+python3 scripts/deckforge.py schema-to-pptx \
+  --schema /tmp/deckforge-smoke/deck-schema.json \
+  --output /tmp/deckforge-smoke/deck.pptx
+
+python3 scripts/deckforge.py render-pptx \
+  --pptx /tmp/deckforge-smoke/deck.pptx \
+  --out-dir /tmp/deckforge-smoke/qa
+
+python3 scripts/deckforge.py qa \
+  --render-dir /tmp/deckforge-smoke/qa \
+  --contact-sheet /tmp/deckforge-smoke/qa/contact.png
+```
+
 ## 本地 Harness CLI
 
 初始化 DeckForge 工作区：
