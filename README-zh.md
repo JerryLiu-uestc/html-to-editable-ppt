@@ -24,13 +24,13 @@ HTML to Editable PPT 的目标不是“随便生成几页 PPT”，而是把 PPT
 
 生成效果，按单页展示。完整 PPTX 是 5 页，README 为了清晰只展示前 4 页。
 
-![Demo slide 1](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/slide-1.png)
+![Demo slide 1](https://github.com/JerryLiu-uestc/html-to-editable-ppt/raw/main/examples/html-to-editable-ppt-demo/qa/slide-1.png)
 
-![Demo slide 2](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/slide-2.png)
+![Demo slide 2](https://github.com/JerryLiu-uestc/html-to-editable-ppt/raw/main/examples/html-to-editable-ppt-demo/qa/slide-2.png)
 
-![Demo slide 3](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/slide-3.png)
+![Demo slide 3](https://github.com/JerryLiu-uestc/html-to-editable-ppt/raw/main/examples/html-to-editable-ppt-demo/qa/slide-3.png)
 
-![Demo slide 4](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/slide-4.png)
+![Demo slide 4](https://github.com/JerryLiu-uestc/html-to-editable-ppt/raw/main/examples/html-to-editable-ppt-demo/qa/slide-4.png)
 
 仓库里同时放了这份 demo 的可编辑 PPTX 和源文件：
 
