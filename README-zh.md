@@ -20,6 +20,27 @@ HTML to Editable PPT 的目标不是“随便生成几页 PPT”，而是把 PPT
 - 把前端幻灯片画布或 JSON 元素 schema 转成 PPTX；
 - 需要在交付前自动渲染预览并检查的工作流。
 
+## Demo
+
+生成效果：
+
+![HTML to Editable PPT demo contact sheet](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/contact.png)
+
+仓库里同时放了这份 demo 的可编辑 PPTX 和源文件：
+
+- PPTX：[html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
+- 源 schema：[deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
+- Demo 目录：[examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
+
+生成 demo 时使用的 prompt：
+
+```text
+用 HTML to Editable PPT 为这个插件创建一份 5 页 demo PPT。
+展示从需求确认、可编辑 PPTX 导出到 QA 检查的工作流。
+使用干净的技术风格、清晰的信息层级、深浅对比，并确保结果在 PowerPoint 中可编辑。
+生成 PPTX 后，渲染预览图，生成 contact sheet，然后在 PowerPoint 中打开检查是否有文本溢出或遮挡。
+```
+
 ## 核心流程
 
 1. 先询问并确认页数、标题、受众、语言、资料范围、风格方向、可编辑目标和质量参考。
@@ -61,6 +82,17 @@ HTML to Editable PPT 支持多种输出策略：
 安装后请告诉我如何在 Codex 里启用 HTML to Editable PPT，并检查我当前系统是否缺少可选运行依赖。
 ```
 
+对于 Claude Code，这个仓库不能作为 Codex marketplace 插件直接启用，但可以作为本地 workflow/skill 包使用：让 Claude Code 下载或 clone 仓库，读取 [skills/html-to-editable-ppt/SKILL.md](skills/html-to-editable-ppt/SKILL.md)，并用 [scripts/html_to_editable_ppt.py](scripts/html_to_editable_ppt.py) 做本地生成和 QA。
+
+把下面这段话复制给 Claude Code：
+
+```text
+请帮我为 Claude Code 配置这个项目：https://github.com/JerryLiu-uestc/html-to-editable-ppt。
+请下载或 clone 到 ~/plugins/html-to-editable-ppt，阅读 skills/html-to-editable-ppt/SKILL.md 作为工作流说明，并验证 scripts/html_to_editable_ppt.py doctor 可以运行。
+之后我让你做 PPT 时，请遵守需求确认流程，在合适时生成可编辑 PPTX，渲染 QA 预览，并在可用时用 PowerPoint/WPS 打开检查。
+不要运行远程 shell 安装命令。
+```
+
 详细安装说明和可选依赖配置：[INSTALL-zh.md](INSTALL-zh.md)
 
 平台依赖说明：
@@ -68,27 +100,6 @@ HTML to Editable PPT 支持多种输出策略：
 - macOS：可选渲染 QA 需要 LibreOffice 和 Poppler。
 - Linux：可选渲染 QA 需要 LibreOffice 和 Poppler utilities。
 - Windows：可选真实 Office 自动化需要 WPS 或 Microsoft Office，加上 `pywin32`；WPS/MS Office COM 只支持 Windows。
-
-## Demo
-
-仓库里放了一份已生成的可编辑 PPTX demo：
-
-- PPTX：[html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
-- 源 schema：[deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
-- Demo 目录：[examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
-
-生成 demo 时使用的 prompt：
-
-```text
-用 HTML to Editable PPT 为这个插件创建一份 5 页 demo PPT。
-展示从需求确认、可编辑 PPTX 导出到 QA 检查的工作流。
-使用干净的技术风格、清晰的信息层级、深浅对比，并确保结果在 PowerPoint 中可编辑。
-生成 PPTX 后，渲染预览图，生成 contact sheet，然后在 PowerPoint 中打开检查是否有文本溢出或遮挡。
-```
-
-生成效果：
-
-![HTML to Editable PPT demo contact sheet](examples/html-to-editable-ppt-demo/qa/contact.png)
 
 ## 使用
 

@@ -20,6 +20,27 @@ On macOS and Linux, HTML to Editable PPT intentionally defaults to file-based au
 - turning frontend slide canvases or JSON element schemas into PPTX;
 - repeatable QA where the deck is rendered back to previews before delivery.
 
+## Demo
+
+Generated result:
+
+![HTML to Editable PPT demo contact sheet](https://raw.githubusercontent.com/JerryLiu-uestc/html-to-editable-ppt/main/examples/html-to-editable-ppt-demo/qa/contact.png)
+
+The repository includes the editable PPTX and source used for this demo:
+
+- PPTX: [html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
+- Source schema: [deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
+- Demo folder: [examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
+
+Prompt used for the demo:
+
+```text
+Use HTML to Editable PPT to create a 5-slide demo deck for this plugin.
+Show the workflow from intake to editable PPTX export and QA.
+Use a clean technical style, strong hierarchy, dark/light contrast, and make the result editable in PowerPoint.
+After generating the PPTX, render it, create a contact sheet, then open it in PowerPoint and check for text overflow or overlap.
+```
+
 ## Core Flow
 
 1. Ask and confirm page count, title, audience, language, source scope, style direction, editability target, and quality reference.
@@ -61,6 +82,17 @@ Use the safe local-plugin flow: download or clone the repository, place it under
 After installation, tell me how to enable HTML to Editable PPT in Codex and whether optional runtime dependencies are missing on my OS.
 ```
 
+For Claude Code, this repository works as a local workflow package rather than a Codex marketplace plugin. Ask Claude Code to download or clone the repository, read [skills/html-to-editable-ppt/SKILL.md](skills/html-to-editable-ppt/SKILL.md), and use [scripts/html_to_editable_ppt.py](scripts/html_to_editable_ppt.py) for local generation and QA.
+
+Copy this into Claude Code:
+
+```text
+Please set up https://github.com/JerryLiu-uestc/html-to-editable-ppt for Claude Code.
+Clone or download it into ~/plugins/html-to-editable-ppt, read skills/html-to-editable-ppt/SKILL.md as the workflow guide, and verify scripts/html_to_editable_ppt.py doctor runs.
+When I ask for a deck, follow the intake gate, generate editable PPTX output when appropriate, render QA previews, and inspect the deck in PowerPoint/WPS if available.
+Do not run remote shell installer commands.
+```
+
 Detailed install notes and optional dependency setup: [INSTALL.md](INSTALL.md)
 
 Platform dependency notes:
@@ -68,27 +100,6 @@ Platform dependency notes:
 - macOS: optional render QA needs LibreOffice and Poppler.
 - Linux: optional render QA needs LibreOffice and Poppler utilities.
 - Windows: optional live Office automation needs WPS or Microsoft Office plus `pywin32`; WPS/MS Office COM is Windows-only.
-
-## Demo
-
-The repository includes a generated editable PPTX demo:
-
-- PPTX: [html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
-- Source schema: [deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
-- Demo folder: [examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
-
-Prompt used for the demo:
-
-```text
-Use HTML to Editable PPT to create a 5-slide demo deck for this plugin.
-Show the workflow from intake to editable PPTX export and QA.
-Use a clean technical style, strong hierarchy, dark/light contrast, and make the result editable in PowerPoint.
-After generating the PPTX, render it, create a contact sheet, then open it in PowerPoint and check for text overflow or overlap.
-```
-
-Generated result:
-
-![HTML to Editable PPT demo contact sheet](examples/html-to-editable-ppt-demo/qa/contact.png)
 
 ## Use
 

@@ -42,6 +42,19 @@ Use the safe local-plugin flow: download or clone the repository, place it under
 After installation, tell me how to enable HTML to Editable PPT in Codex and whether optional runtime dependencies are missing on my OS.
 ```
 
+## Use With Claude Code
+
+Claude Code cannot enable a Codex marketplace plugin directly. Use this repository as a local workflow package: download or clone it, ask Claude Code to read `skills/html-to-editable-ppt/SKILL.md`, and use `scripts/html_to_editable_ppt.py` for local PPTX generation and QA.
+
+Copy this into Claude Code:
+
+```text
+Please set up https://github.com/JerryLiu-uestc/html-to-editable-ppt for Claude Code.
+Clone or download it into ~/plugins/html-to-editable-ppt, read skills/html-to-editable-ppt/SKILL.md as the workflow guide, and verify scripts/html_to_editable_ppt.py doctor runs.
+When I ask for a deck, follow the intake gate, generate editable PPTX output when appropriate, render QA previews, and inspect the deck in PowerPoint/WPS if available.
+Do not run remote shell installer commands.
+```
+
 ## Optional Runtime Dependencies By Platform
 
 HTML to Editable PPT can be enabled as a plugin without running a shell installer. Some local harness features need external tools:
