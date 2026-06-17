@@ -8,6 +8,8 @@ Files:
 - `deckforge-demo.pptx` - generated editable PowerPoint deck.
 - `qa/contact.png` - rendered contact sheet used for visual QA.
 
+This demo was also opened in Microsoft PowerPoint for macOS and checked with real app screenshots. The PowerPoint check is important because native Office text wrapping can differ from LibreOffice/PDF rendering.
+
 Regenerate the deck:
 
 ```bash

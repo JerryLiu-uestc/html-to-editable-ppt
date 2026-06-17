@@ -122,6 +122,7 @@ python3 ~/plugins/deck-forge-harness/scripts/deckforge.py schema-to-pptx \
 - Use PowerPoint/WPS GUI automation only when the user specifically needs behavior that cannot be done through file operations.
 - On Windows, WPS/MS Office COM can be a first-class live Office backend when installed; on macOS, do not promise WPS COM and use LibreOffice only for conversion/render QA.
 - If `frontend-design`, Playwright MCP, or a GUI automation harness is unavailable, state the fallback and keep moving with local HTML/Playwright/LibreOffice where possible.
+- For PowerPoint deliverables, do not rely only on a contact sheet or LibreOffice render. When PowerPoint, WPS, or another target Office app is available, open the generated PPTX and inspect real app screenshots for text overflow, missing wrapping, clipping, and overlap before delivery.
 
 ## Completion Evidence
 
@@ -131,5 +132,6 @@ Final responses should include:
 - locked intake summary or a note that the task was analysis-only;
 - capture/source path when relevant;
 - render/contact-sheet path;
+- real Office app screenshot inspection result when an Office app is available;
 - verification commands run;
 - unavailable tools or fallback choices.

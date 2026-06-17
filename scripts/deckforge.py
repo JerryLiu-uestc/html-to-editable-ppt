@@ -20,6 +20,7 @@ from PIL import Image, ImageDraw, ImageOps, ImageStat
 from pptx import Presentation
 from pptx.dml.color import RGBColor
 from pptx.enum.shapes import MSO_SHAPE
+from pptx.enum.text import MSO_AUTO_SIZE
 from pptx.util import Inches, Pt
 
 
@@ -174,6 +175,9 @@ def add_schema_text(slide, el: dict, sx: float, sy: float) -> None:
     )
     tf = shape.text_frame
     tf.clear()
+    tf.word_wrap = bool(el.get("wrap", True))
+    if bool(el.get("fit", True)):
+        tf.auto_size = MSO_AUTO_SIZE.TEXT_TO_FIT_SHAPE
     tf.margin_left = tf.margin_right = tf.margin_top = tf.margin_bottom = 0
     p = tf.paragraphs[0]
     p.text = str(el.get("text", ""))

@@ -6,16 +6,16 @@
       "elements": [
         {"type": "text", "x": 74, "y": 62, "w": 260, "h": 34, "text": "DECKFORGE HARNESS", "fs": 15, "bold": true, "color": "#2DD4BF"},
         {"type": "text", "x": 72, "y": 140, "w": 770, "h": 145, "text": "Image-first decks,\neditable by default", "fs": 52, "bold": true, "color": "#F9FAFB"},
-        {"type": "text", "x": 76, "y": 318, "w": 640, "h": 80, "text": "A Codex plugin workflow for turning screenshots, generated slide art, and frontend slide canvases into polished PowerPoint files with a visual QA loop.", "fs": 18, "color": "#CBD5E1"},
+        {"type": "text", "x": 76, "y": 318, "w": 620, "h": 92, "text": "Turn screenshots, generated slide art,\nand frontend slide canvases into\neditable PowerPoint files.", "fs": 18, "color": "#CBD5E1"},
         {"type": "card", "x": 790, "y": 94, "w": 360, "h": 128, "fill": "#0F766E", "line": "#14B8A6"},
         {"type": "text", "x": 822, "y": 120, "w": 300, "h": 36, "text": "1. Ask first", "fs": 25, "bold": true, "color": "#FFFFFF"},
-        {"type": "text", "x": 824, "y": 164, "w": 286, "h": 42, "text": "Clarify intent, style, fidelity, and which screenshots stay blank.", "fs": 13, "color": "#CCFBF1"},
+        {"type": "text", "x": 824, "y": 164, "w": 286, "h": 42, "text": "Clarify intent, style,\nand fidelity.", "fs": 13, "color": "#CCFBF1"},
         {"type": "card", "x": 820, "y": 260, "w": 360, "h": 128, "fill": "#F97316", "line": "#FDBA74"},
         {"type": "text", "x": 852, "y": 286, "w": 300, "h": 36, "text": "2. Build editable", "fs": 25, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 854, "y": 330, "w": 286, "h": 42, "text": "Use shapes, text boxes, cards, lines, and cropped image assets.", "fs": 13, "color": "#431407"},
+        {"type": "text", "x": 854, "y": 330, "w": 286, "h": 42, "text": "Use shapes, text,\ncards, and crops.", "fs": 13, "color": "#431407"},
         {"type": "card", "x": 850, "y": 426, "w": 360, "h": 128, "fill": "#E5E7EB", "line": "#CBD5E1"},
         {"type": "text", "x": 882, "y": 452, "w": 300, "h": 36, "text": "3. Render and QA", "fs": 25, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 884, "y": 496, "w": 286, "h": 42, "text": "Export slide images, inspect layout, and fix visual defects.", "fs": 13, "color": "#374151"},
+        {"type": "text", "x": 884, "y": 496, "w": 286, "h": 42, "text": "Render images,\ninspect, then fix.", "fs": 13, "color": "#374151"},
         {"type": "line", "x": 76, "y": 574, "w": 590, "h": 5, "color": "#2DD4BF"},
         {"type": "text", "x": 76, "y": 596, "w": 520, "h": 36, "text": "Demo deck generated from examples/deckforge-demo/deck-schema.json", "fs": 13, "color": "#94A3B8"}
       ]
@@ -28,31 +28,31 @@
         {"type": "card", "x": 70, "y": 192, "w": 250, "h": 250, "fill": "#FFFFFF", "line": "#CBD5E1"},
         {"type": "text", "x": 98, "y": 220, "w": 48, "h": 48, "text": "01", "fs": 27, "bold": true, "color": "#0F766E"},
         {"type": "text", "x": 98, "y": 296, "w": 180, "h": 36, "text": "Brief", "fs": 24, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 100, "y": 352, "w": 172, "h": 58, "text": "Audience, source images, style target, and output format.", "fs": 13, "color": "#64748B"},
+        {"type": "text", "x": 100, "y": 352, "w": 172, "h": 58, "text": "Audience\nSources\nStyle target", "fs": 13, "color": "#64748B"},
         {"type": "line", "x": 330, "y": 314, "w": 58, "h": 4, "color": "#F97316"},
         {"type": "card", "x": 398, "y": 192, "w": 250, "h": 250, "fill": "#FFFFFF", "line": "#CBD5E1"},
         {"type": "text", "x": 426, "y": 220, "w": 48, "h": 48, "text": "02", "fs": 27, "bold": true, "color": "#0F766E"},
         {"type": "text", "x": 426, "y": 296, "w": 180, "h": 36, "text": "Layout", "fs": 24, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 428, "y": 352, "w": 172, "h": 58, "text": "Use browser rendering for slide art and visual direction.", "fs": 13, "color": "#64748B"},
+        {"type": "text", "x": 428, "y": 352, "w": 172, "h": 58, "text": "Browser render\nVisual direction\nReference capture", "fs": 13, "color": "#64748B"},
         {"type": "line", "x": 658, "y": 314, "w": 58, "h": 4, "color": "#F97316"},
         {"type": "card", "x": 726, "y": 192, "w": 250, "h": 250, "fill": "#FFFFFF", "line": "#CBD5E1"},
         {"type": "text", "x": 754, "y": 220, "w": 48, "h": 48, "text": "03", "fs": 27, "bold": true, "color": "#0F766E"},
         {"type": "text", "x": 754, "y": 296, "w": 180, "h": 36, "text": "PPTX", "fs": 24, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 756, "y": 352, "w": 172, "h": 58, "text": "Schema routes text, cards, lines, and image crops.", "fs": 13, "color": "#64748B"},
+        {"type": "text", "x": 756, "y": 352, "w": 172, "h": 58, "text": "Text boxes\nCards and lines\nImage crops", "fs": 13, "color": "#64748B"},
         {"type": "line", "x": 986, "y": 314, "w": 58, "h": 4, "color": "#F97316"},
         {"type": "card", "x": 1054, "y": 192, "w": 154, "h": 250, "fill": "#111827", "line": "#111827"},
         {"type": "text", "x": 1082, "y": 220, "w": 48, "h": 48, "text": "04", "fs": 27, "bold": true, "color": "#2DD4BF"},
         {"type": "text", "x": 1082, "y": 296, "w": 90, "h": 36, "text": "QA", "fs": 24, "bold": true, "color": "#F9FAFB"},
         {"type": "text", "x": 1084, "y": 352, "w": 88, "h": 58, "text": "Render images and inspect.", "fs": 12, "color": "#CBD5E1"},
         {"type": "card", "x": 94, "y": 514, "w": 1030, "h": 86, "fill": "#ECFEFF", "line": "#99F6E4"},
-        {"type": "text", "x": 124, "y": 537, "w": 950, "h": 36, "text": "Design rule: every slide needs a visible structure, readable hierarchy, and enough whitespace to survive PowerPoint editing.", "fs": 19, "bold": true, "color": "#155E75"}
+        {"type": "text", "x": 124, "y": 537, "w": 900, "h": 36, "text": "Design rule: readable hierarchy, visible structure, enough whitespace.", "fs": 19, "bold": true, "color": "#155E75"}
       ]
     },
     {
       "background": "#FFFFFF",
       "elements": [
         {"type": "text", "x": 70, "y": 54, "w": 980, "h": 56, "text": "Editable reconstruction demo", "fs": 36, "bold": true, "color": "#111827"},
-        {"type": "text", "x": 74, "y": 126, "w": 760, "h": 34, "text": "Built from native PowerPoint text boxes, rounded rectangles, and shape bars.", "fs": 15, "color": "#475569"},
+        {"type": "text", "x": 74, "y": 126, "w": 760, "h": 34, "text": "Native text boxes, rounded rectangles, and shape bars.", "fs": 15, "color": "#475569"},
         {"type": "card", "x": 74, "y": 190, "w": 462, "h": 342, "fill": "#F8FAFC", "line": "#CBD5E1"},
         {"type": "text", "x": 108, "y": 222, "w": 330, "h": 34, "text": "Source map", "fs": 24, "bold": true, "color": "#111827"},
         {"type": "card", "x": 108, "y": 284, "w": 170, "h": 88, "fill": "#0F766E", "line": "#0F766E"},
@@ -99,7 +99,7 @@
         {"type": "text", "x": 870, "y": 354, "w": 232, "h": 28, "text": "Skip unsupported paths", "fs": 16, "color": "#431407"},
         {"type": "text", "x": 870, "y": 390, "w": 232, "h": 28, "text": "Keep deck usable", "fs": 16, "color": "#431407"},
         {"type": "line", "x": 870, "y": 424, "w": 204, "h": 6, "color": "#111827"},
-        {"type": "text", "x": 102, "y": 562, "w": 980, "h": 42, "text": "No remote shell installer is required. Users can download ZIP, enable the plugin, or ask Codex to install it safely.", "fs": 22, "bold": true, "color": "#F9FAFB"}
+        {"type": "text", "x": 102, "y": 562, "w": 900, "h": 52, "text": "Download ZIP, enable the plugin,\nor ask Codex to install it safely.", "fs": 20, "bold": true, "color": "#F9FAFB"}
       ]
     },
     {
@@ -120,7 +120,7 @@
         {"type": "text", "x": 862, "y": 282, "w": 142, "h": 34, "text": "Inspect", "fs": 30, "bold": true, "color": "#111827"},
         {"type": "text", "x": 862, "y": 330, "w": 142, "h": 26, "text": "layout defects", "fs": 15, "color": "#431407"},
         {"type": "card", "x": 168, "y": 564, "w": 844, "h": 62, "fill": "#111827", "line": "#111827"},
-        {"type": "text", "x": 202, "y": 584, "w": 790, "h": 24, "text": "Final deliverable: examples/deckforge-demo/deckforge-demo.pptx", "fs": 18, "bold": true, "color": "#F9FAFB"}
+        {"type": "text", "x": 202, "y": 584, "w": 790, "h": 24, "text": "Final deliverable: deckforge-demo.pptx", "fs": 18, "bold": true, "color": "#F9FAFB"}
       ]
     }
   ]
