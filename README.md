@@ -74,11 +74,13 @@ It does not magically recover native chart data, hidden design layers, or exact 
 
 Recommended:
 
-1. Download this repository as a ZIP: [html-to-editable-ppt-main.zip](https://github.com/JerryLiu-uestc/html-to-editable-ppt/archive/refs/heads/main.zip).
+1. Download the clean release package: [html-to-editable-ppt-plugin.zip](https://github.com/JerryLiu-uestc/html-to-editable-ppt/releases/latest/download/html-to-editable-ppt-plugin.zip).
 2. Unzip it locally.
 3. In Codex, install or enable the local plugin folder `html-to-editable-ppt`.
 
 Then restart Codex or refresh plugins, and enable **HTML to Editable PPT** from the **Personal** marketplace.
+
+Use the source ZIP only when you want examples, demo assets, or development files: [source archive](https://github.com/JerryLiu-uestc/html-to-editable-ppt/archive/refs/heads/main.zip).
 
 If you want Codex to help install it, send this prompt to your Codex agent:
 
@@ -124,6 +126,26 @@ HTML to Editable PPT will ask for page count, title, audience, language, source 
 - Uses small harness adapters for repeatable local workflows.
 - Builds PPTX with `python-pptx` and verifies renders with LibreOffice/Poppler.
 - Supports a portable JSON element-router path for structured decks.
+
+## Project Structure
+
+```text
+html-to-editable-ppt/
+├── .codex-plugin/plugin.json        # Codex plugin manifest
+├── skills/                          # Workflow skills loaded by Codex or read by Claude Code
+│   ├── html-to-editable-ppt/
+│   ├── frontend-slide-design/
+│   └── harness-anything/
+├── scripts/                         # Local CLI helpers and release packaging
+│   ├── html_to_editable_ppt.py
+│   └── package_release.py
+├── docs/                            # CLI references
+├── examples/                        # Demo PPTX and rendered previews; source repo only
+├── README.md / README-zh.md
+└── INSTALL.md / INSTALL-zh.md
+```
+
+The release ZIP intentionally contains only `.codex-plugin/`, `skills/`, `scripts/html_to_editable_ppt.py`, `docs/`, README/INSTALL files, and `LICENSE`. It excludes `examples/`, `.git/`, `dist/`, and other development artifacts.
 
 ## Platform Notes
 

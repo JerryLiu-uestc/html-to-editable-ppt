@@ -2,10 +2,10 @@
 
 ## Download
 
-Download the ZIP from GitHub:
+Download the clean release package:
 
 ```text
-https://github.com/JerryLiu-uestc/html-to-editable-ppt/archive/refs/heads/main.zip
+https://github.com/JerryLiu-uestc/html-to-editable-ppt/releases/latest/download/html-to-editable-ppt-plugin.zip
 ```
 
 Or use `git clone` if you prefer keeping the plugin up to date through Git:
@@ -14,9 +14,11 @@ Or use `git clone` if you prefer keeping the plugin up to date through Git:
 git clone https://github.com/JerryLiu-uestc/html-to-editable-ppt ~/plugins/html-to-editable-ppt
 ```
 
+The GitHub source ZIP includes examples and development files. Use it only when you want the demo assets or source tree.
+
 ## Enable In Codex
 
-1. Download the repository ZIP from GitHub.
+1. Download the release package from GitHub Releases.
 2. Unzip it.
 3. Move the folder to a local plugin location, for example:
 

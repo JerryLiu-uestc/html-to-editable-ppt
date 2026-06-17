@@ -2,5 +2,6 @@ __pycache__/
 *.pyc
 .DS_Store
 deckforge/
+dist/
 node_modules/
 *.bak.pptx

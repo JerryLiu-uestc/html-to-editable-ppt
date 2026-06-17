@@ -2,10 +2,10 @@
 
 ## 下载
 
-从 GitHub 下载 ZIP：
+从 GitHub Releases 下载干净的 release 包：
 
 ```text
-https://github.com/JerryLiu-uestc/html-to-editable-ppt/archive/refs/heads/main.zip
+https://github.com/JerryLiu-uestc/html-to-editable-ppt/releases/latest/download/html-to-editable-ppt-plugin.zip
 ```
 
 如果你希望后续用 Git 更新，也可以 clone：
@@ -14,9 +14,11 @@ https://github.com/JerryLiu-uestc/html-to-editable-ppt/archive/refs/heads/main.z
 git clone https://github.com/JerryLiu-uestc/html-to-editable-ppt ~/plugins/html-to-editable-ppt
 ```
 
+GitHub 源码 ZIP 会包含 examples 和开发文件。只有在你想查看 demo 素材或源码树时才使用源码 ZIP。
+
 ## 在 Codex 中启用
 
-1. 在 GitHub 下载本仓库 ZIP。
+1. 在 GitHub Releases 下载 release 包。
 2. 解压。
 3. 将文件夹移动到本地插件目录，例如：
 
