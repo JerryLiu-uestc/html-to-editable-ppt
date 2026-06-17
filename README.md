@@ -71,7 +71,24 @@ Platform dependency notes:
 
 ## Demo
 
-See [examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo) for a generated editable PPTX demo, its source schema, and a rendered QA contact sheet.
+The repository includes a generated editable PPTX demo:
+
+- PPTX: [html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
+- Source schema: [deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
+- Demo folder: [examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
+
+Prompt used for the demo:
+
+```text
+Use HTML to Editable PPT to create a 5-slide demo deck for this plugin.
+Show the workflow from intake to editable PPTX export and QA.
+Use a clean technical style, strong hierarchy, dark/light contrast, and make the result editable in PowerPoint.
+After generating the PPTX, render it, create a contact sheet, then open it in PowerPoint and check for text overflow or overlap.
+```
+
+Generated result:
+
+![HTML to Editable PPT demo contact sheet](examples/html-to-editable-ppt-demo/qa/contact.png)
 
 ## Use
 

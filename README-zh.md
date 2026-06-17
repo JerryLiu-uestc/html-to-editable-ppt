@@ -71,7 +71,24 @@ HTML to Editable PPT 支持多种输出策略：
 
 ## Demo
 
-查看 [examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)，里面有一份已生成的可编辑 PPTX demo、源 schema 和渲染 QA contact sheet。
+仓库里放了一份已生成的可编辑 PPTX demo：
+
+- PPTX：[html-to-editable-ppt-demo.pptx](examples/html-to-editable-ppt-demo/html-to-editable-ppt-demo.pptx)
+- 源 schema：[deck-schema.json](examples/html-to-editable-ppt-demo/deck-schema.json)
+- Demo 目录：[examples/html-to-editable-ppt-demo](examples/html-to-editable-ppt-demo)
+
+生成 demo 时使用的 prompt：
+
+```text
+用 HTML to Editable PPT 为这个插件创建一份 5 页 demo PPT。
+展示从需求确认、可编辑 PPTX 导出到 QA 检查的工作流。
+使用干净的技术风格、清晰的信息层级、深浅对比，并确保结果在 PowerPoint 中可编辑。
+生成 PPTX 后，渲染预览图，生成 contact sheet，然后在 PowerPoint 中打开检查是否有文本溢出或遮挡。
+```
+
+生成效果：
+
+![HTML to Editable PPT demo contact sheet](examples/html-to-editable-ppt-demo/qa/contact.png)
 
 ## 使用
 
