@@ -1,5 +1,7 @@
 # DeckForge Harness
 
+[中文说明](README-zh.md)
+
 DeckForge Harness is a Codex plugin for agentic presentation workflows.
 
 It is built around the idea:
